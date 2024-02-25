@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @RestController
 //this is for change connect ui to backend so cors annotation required
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/product")
+@RequestMapping("/prod")
 //This is productController
 public class ProductController {
 
