@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
     @Autowired
     UserService userService;
