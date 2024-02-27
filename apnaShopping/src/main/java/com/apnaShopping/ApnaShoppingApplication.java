@@ -9,14 +9,14 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-public class ApnaShoppingApplication {
-	@Bean
-	 ModelMapper modelMapper()
-	{
-		return new ModelMapper();
-	}
-	public static void main(String[] args) {
-		SpringApplication.run(ApnaShoppingApplication.class, args);
-	}
-}
+//public class ApnaShoppingApplication {
+//	@Bean
+//	 ModelMapper modelMapper()
+//	{
+//		return new ModelMapper();
+//	}
+//	public static void main(String[] args) {
+//		SpringApplication.run(ApnaShoppingApplication.class, args);
+//	}
+//}
 
