@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserRepo userRepo;
+    @Autowired
+    public void setUserRepo(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
     public UserResponseDTO createUser(UserRequestDTO userRequestDTO) {
         User user = new User();
         user.setCustomerfname(userRequestDTO.getCustomerFName());
