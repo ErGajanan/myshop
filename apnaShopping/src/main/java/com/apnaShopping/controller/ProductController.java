@@ -13,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import springfox.documentation.annotations.Cacheable;
 
 import java.io.IOException;
 import java.util.Base64;
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
 @RestController
 @Api(tags = "Product Management API")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/product")
+@RequestMapping("/products")
 public class ProductController {
 
     @Autowired
@@ -47,6 +48,7 @@ public class ProductController {
     }
 
     @ApiOperation(value = "Get all products with pagination support")//this is swagger annotation
+//   @Cacheable(value="products")
    @GetMapping("/getproducts")
     public List<ProductResponseDTO> getAllProducts(@RequestParam(defaultValue = "0") int page,
                                                    @RequestParam(defaultValue = "10") int size) {
