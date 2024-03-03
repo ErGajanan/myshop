@@ -48,7 +48,7 @@ public class ProductController {
     }
 
     @ApiOperation(value = "Get all products with pagination support")//this is swagger annotation
-//   @Cacheable(value="products")
+    @Cacheable(value = "myCache")
    @GetMapping("/getproducts")
     public List<ProductResponseDTO> getAllProducts(@RequestParam(defaultValue = "0") int page,
                                                    @RequestParam(defaultValue = "10") int size) {
